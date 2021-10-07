@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux';
-import { userInfo } from '../actions/user.Actions';
+import { loginWithGoogleFirebase, userInfo } from '../actions/user.Actions';
 
 const Form = () => {
 
@@ -9,8 +9,8 @@ const Form = () => {
 
   const handleSendInfo = (e) => {
     e.preventDefault();
-    console.log(data);
-    dispatch(userInfo(data));
+    // console.log(data);
+    dispatch(loginWithGoogleFirebase(data));
   }
 
   return (
